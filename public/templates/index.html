@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/landing.css">
+    <title>Document</title>
+    <script>
+        const introTheme = new Audio('assets/sounds/among-us.mp3')
+        document.addEventListener('mousemove', ()=> {
+            introTheme.loop = true
+            introTheme.play()
+        })
+
+    </script>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="assets/videos/space-bg.mp4" type="video/mp4">
+        Potato Browser
+    </video>
+    <div class="container">
+        <p class="title">Space VR</p>
+        <a class="button" href="http://localhost:3000/vr" style="--color:#1eff5a;">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Go Brr
+        </a>
+    </div>
+</body>
+</html>
