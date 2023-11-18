@@ -270,6 +270,9 @@ AFRAME.registerComponent('do-something', {
     var urano = sceneEl.querySelector('#urano')
     var neptuno = sceneEl.querySelector('#neptuno')
 	var question_object = question_and_answer.quiz
+	var cam1 = document.querySelector('#cam1');
+	var cam2 = document.querySelector('#cam2');
+
     mercurio.addEventListener('click', function (evt) {
     	var name = "Mercury"
     	get_api_data(name)
@@ -375,6 +378,70 @@ AFRAME.registerComponent('do-something', {
 	    setTimeout(() => {quiz_question.object3D.visible = false ;quiz_answer.object3D.visible = true}, 10000)
 	    setTimeout(() => {quiz_answer.object3D.visible = false}, 14000)
 	});
+
+	tel1.addEventListener('click',(evt)=>{
+		var cam1 = document.querySelector('#cam1');
+		var cam2 = document.querySelector('#cam2');
+		const arrayOfstuff = evt.srcElement.attributes.position.nodeValue
+		cam1.setAttribute('position', arrayOfstuff);
+		cam2.setAttribute('position', arrayOfstuff);
+	})
+
+	tel2.addEventListener('click',(evt)=>{
+		var cam1 = document.querySelector('#cam1');
+		var cam2 = document.querySelector('#cam2');
+		const arrayOfstuff = evt.srcElement.attributes.position.nodeValue
+		cam1.setAttribute('position', arrayOfstuff);
+		cam2.setAttribute('position', arrayOfstuff);
+	})
+
+	tel3.addEventListener('click',(evt)=>{
+		var cam1 = document.querySelector('#cam1');
+		var cam2 = document.querySelector('#cam2');
+		const arrayOfstuff = evt.srcElement.attributes.position.nodeValue
+		cam1.setAttribute('position', arrayOfstuff);
+		cam2.setAttribute('position', arrayOfstuff);
+	})
+
+	tel4.addEventListener('click',(evt)=>{
+		var cam1 = document.querySelector('#cam1');
+		var cam2 = document.querySelector('#cam2');
+		const arrayOfstuff = evt.srcElement.attributes.position.nodeValue
+		cam1.setAttribute('position', arrayOfstuff);
+		cam2.setAttribute('position', arrayOfstuff);
+	})
+
+	tel5.addEventListener('click',(evt)=>{
+		var cam1 = document.querySelector('#cam1');
+		var cam2 = document.querySelector('#cam2');
+		const arrayOfstuff = evt.srcElement.attributes.position.nodeValue
+		cam1.setAttribute('position', arrayOfstuff);
+		cam2.setAttribute('position', arrayOfstuff);
+	})
+
+	tel6.addEventListener('click',(evt)=>{
+		var cam1 = document.querySelector('#cam1');
+		var cam2 = document.querySelector('#cam2');
+		const arrayOfstuff = evt.srcElement.attributes.position.nodeValue
+		cam1.setAttribute('position', arrayOfstuff);
+		cam2.setAttribute('position', arrayOfstuff);
+	})
+
+	tel7.addEventListener('click',(evt)=>{
+		var cam1 = document.querySelector('#cam1');
+		var cam2 = document.querySelector('#cam2');
+		const arrayOfstuff = evt.srcElement.attributes.position.nodeValue
+		cam1.setAttribute('position', arrayOfstuff);
+		cam2.setAttribute('position', arrayOfstuff);
+	})
+
+	tel8.addEventListener('click',(evt)=>{
+		var cam1 = document.querySelector('#cam1');
+		var cam2 = document.querySelector('#cam2');
+		const arrayOfstuff = evt.srcElement.attributes.position.nodeValue
+		cam1.setAttribute('position', arrayOfstuff);
+		cam2.setAttribute('position', arrayOfstuff);
+	})
 
   	}
 
