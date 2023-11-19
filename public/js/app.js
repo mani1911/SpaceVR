@@ -326,8 +326,6 @@ AFRAME.registerComponent('do-something', {
   });
 
     mercurio.addEventListener('click', function (evt) {
-      stopAllVoiceOvers()
-      mercuryVoiceover.play()
     	var name = "Mercury"
     	get_api_data(name)
 		const question_ans = question_object[0].questions
@@ -342,8 +340,7 @@ AFRAME.registerComponent('do-something', {
   	});
 
   	venus.addEventListener('click', function (evt) {
-      stopAllVoiceOvers()
-      venusVoiceover.play()
+
   		var name = "Venus"
 		  get_api_data(name)
 		const question_ans = question_object[1].questions
@@ -358,8 +355,7 @@ AFRAME.registerComponent('do-something', {
   	});
 
     tierra.addEventListener('click', function (evt) {
-      stopAllVoiceOvers()
-      earthVoiceover.play()
+
     	var name = "Earth"
     	get_api_data(name)
 		const question_ans = question_object[2].questions
@@ -373,8 +369,7 @@ AFRAME.registerComponent('do-something', {
 	});
 
 	marte.addEventListener('click', function (evt) {
-    stopAllVoiceOvers()
-    marsVoiceover.play()
+
 	    var name = "Mars"
     	get_api_data(name)
 		const question_ans = question_object[3].questions
@@ -388,8 +383,7 @@ AFRAME.registerComponent('do-something', {
 	});
 
 	jupiter.addEventListener('click', function (evt) {
-    stopAllVoiceOvers()
-    jupiterVoiceover.play()
+
 		var name = "Jupiter"
 		get_api_data(name)
 		const question_ans = question_object[4].questions
@@ -397,14 +391,13 @@ AFRAME.registerComponent('do-something', {
     	setTimeout( () => {set_api_data("Jupiter","1,899×10 27","1,4313×10 15","24.79",q_a.q,q_a.a)}, 1000)
 	    datos.object3D.visible = true
 	    setTimeout( () => {datos.object3D.visible = false}, 6000)
-		setTimeout(() => {quiz_question.object3D.visible = true}, 6500)
+		  setTimeout(() => {quiz_question.object3D.visible = true}, 6500)
 	    setTimeout(() => {quiz_question.object3D.visible = false ;quiz_answer.object3D.visible = true}, 10000)
 	    setTimeout(() => {quiz_answer.object3D.visible = false}, 14000)
 	});
 
 	saturno.addEventListener('click', function (evt) {
-    stopAllVoiceOvers()
-    saturnVoiceover.play()
+
 		var name = "Saturn"
 		get_api_data(name)
 		const question_ans = question_object[5].questions
@@ -418,8 +411,7 @@ AFRAME.registerComponent('do-something', {
 	});
 
 	urano.addEventListener('click', function (evt) {
-    stopAllVoiceOvers()
-    uranusVoiceover.play()
+
 		var name = "Uranus"
 		get_api_data(name)
 		const question_ans = question_object[6].questions
@@ -511,6 +503,48 @@ AFRAME.registerComponent('do-something', {
 		cam2.setAttribute('position', arrayOfstuff);
 	})
 
-  	}
+  s1.addEventListener('click',()=>{
+    stopAllVoiceOvers()
+    mercuryVoiceover.play()
+  })
+
+  s2.addEventListener('click',()=>{
+    stopAllVoiceOvers()
+    venusVoiceover.play()
+  })
+
+  s3.addEventListener('click',()=>{
+    stopAllVoiceOvers()
+    earthVoiceover.play()
+  })
+
+  s4.addEventListener('click',()=>{
+    stopAllVoiceOvers()
+    marsVoiceover.play()
+  })
+
+  s5.addEventListener('click',()=>{
+    stopAllVoiceOvers()
+    jupiterVoiceover.play()
+  })
+
+  s7.addEventListener('click',()=>{
+    stopAllVoiceOvers()
+    saturnVoiceover.play()
+  })
+
+  s8.addEventListener('click',()=>{
+    stopAllVoiceOvers()
+    uranusVoiceover.play()
+  })
+
+  s9.addEventListener('click',()=>{
+    stopAllVoiceOvers()
+    neptuneVoiceover.play()
+  })
+
+
+
+  }
 
 });
