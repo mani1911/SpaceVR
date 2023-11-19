@@ -5,7 +5,6 @@
   </head>
   <body>
     <a-scene  do-something particle-system="preset: dust; particleCount: 1000">
-
       <a-entity   position="0 2 0">
         <a-entity  id="cam1"   camera look-controls wasd-controls>
           <a-entity position="0 0 -2"
@@ -94,7 +93,7 @@
       <a-animation attribute="rotation" from="0 45 45" to="0 360 0" direction="alternate" dur="30000"
     repeat="indefinite"></a-animation>
     </a-sphere>
-    <a-sphere id="sol" position="0 2 -7" radius="4" src="/assets/img/sun.jpg">
+    <a-sphere id="sun" position="0 2 -7" radius="4" src="/assets/img/sun.jpg">
       <a-animation attribute="rotation" from="0 45 45" to="0 360 0" direction="alternate" dur="30000"
       repeat="indefinite"></a-animation>
       <a-entity velocity="0 10 0" position="0 -3 -1" particle-system="color: #EF0000,#44CC00;size: 0.2;maxAge:10;particleCount:300;texture:https://cdn.glitch.com/c1051546-359f-4e34-b17d-bd2b8900be35%2Fthumbnails%2F2k_sun.jpg?1599075846071"></a-entity>

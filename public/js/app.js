@@ -207,7 +207,52 @@ const question_and_answer = {
 var API_URL = "https://api.le-systeme-solaire.net/rest/bodies/"
 var information = {"recently":"","status":"error","mass":0,"volume":0,"gravity":0}
 
+
+
 const spaceAudio = new Audio('assets/sounds/space.mp3')
+
+
+// Voiceovers
+
+const sunVoiceover = new Audio('assets/voiceovers/sun.mp3')
+const mercuryVoiceover = new Audio('assets/voiceovers/mercury.mp3')
+const venusVoiceover = new Audio('assets/voiceovers/venus.mp3')
+const earthVoiceover = new Audio('assets/voiceovers/earth.mp3')
+const marsVoiceover = new Audio('assets/voiceovers/mars.mp3')
+const jupiterVoiceover = new Audio('assets/voiceovers/jupiter.mp3')
+const saturnVoiceover = new Audio('assets/voiceovers/saturn.mp3')
+const uranusVoiceover = new Audio('assets/voiceovers/uranus.mp3')
+const neptuneVoiceover = new Audio('assets/voiceovers/neptune.mp3')
+
+function stopAllVoiceOvers(){
+  sunVoiceover.pause()
+  sunVoiceover.currentTime = 0
+
+  mercuryVoiceover.pause()
+  mercuryVoiceover.currentTime = 0
+
+  venusVoiceover.pause()
+  venusVoiceover.currentTime = 0
+
+  earthVoiceover.pause()
+  earthVoiceover.currentTime = 0
+  
+  marsVoiceover.pause()
+  marsVoiceover.currentTime = 0
+
+  jupiterVoiceover.pause()
+  jupiterVoiceover.currentTime = 0
+
+  saturnVoiceover.pause()
+  saturnVoiceover.currentTime = 0
+
+  uranusVoiceover.pause()
+  uranusVoiceover.currentTime = 0
+
+  neptuneVoiceover.pause()
+  neptuneVoiceover.currentTime = 0
+}
+
 
 spaceAudio.play()
 spaceAudio.loop = true
@@ -269,11 +314,20 @@ AFRAME.registerComponent('do-something', {
     var saturno = sceneEl.querySelector('#saturno')
     var urano = sceneEl.querySelector('#urano')
     var neptuno = sceneEl.querySelector('#neptuno')
+    var sun = sceneEl.querySelector('#sun')
 	var question_object = question_and_answer.quiz
 	var cam1 = document.querySelector('#cam1');
 	var cam2 = document.querySelector('#cam2');
 
+  sun.addEventListener('click', function (evt) {
+    stopAllVoiceOvers()
+    sunVoiceover.play()
+
+  });
+
     mercurio.addEventListener('click', function (evt) {
+      stopAllVoiceOvers()
+      mercuryVoiceover.play()
     	var name = "Mercury"
     	get_api_data(name)
 		const question_ans = question_object[0].questions
@@ -288,6 +342,8 @@ AFRAME.registerComponent('do-something', {
   	});
 
   	venus.addEventListener('click', function (evt) {
+      stopAllVoiceOvers()
+      venusVoiceover.play()
   		var name = "Venus"
 		  get_api_data(name)
 		const question_ans = question_object[1].questions
@@ -302,6 +358,8 @@ AFRAME.registerComponent('do-something', {
   	});
 
     tierra.addEventListener('click', function (evt) {
+      stopAllVoiceOvers()
+      earthVoiceover.play()
     	var name = "Earth"
     	get_api_data(name)
 		const question_ans = question_object[2].questions
@@ -315,6 +373,8 @@ AFRAME.registerComponent('do-something', {
 	});
 
 	marte.addEventListener('click', function (evt) {
+    stopAllVoiceOvers()
+    marsVoiceover.play()
 	    var name = "Mars"
     	get_api_data(name)
 		const question_ans = question_object[3].questions
@@ -328,6 +388,8 @@ AFRAME.registerComponent('do-something', {
 	});
 
 	jupiter.addEventListener('click', function (evt) {
+    stopAllVoiceOvers()
+    jupiterVoiceover.play()
 		var name = "Jupiter"
 		get_api_data(name)
 		const question_ans = question_object[4].questions
@@ -341,6 +403,8 @@ AFRAME.registerComponent('do-something', {
 	});
 
 	saturno.addEventListener('click', function (evt) {
+    stopAllVoiceOvers()
+    saturnVoiceover.play()
 		var name = "Saturn"
 		get_api_data(name)
 		const question_ans = question_object[5].questions
@@ -354,6 +418,8 @@ AFRAME.registerComponent('do-something', {
 	});
 
 	urano.addEventListener('click', function (evt) {
+    stopAllVoiceOvers()
+    uranusVoiceover.play()
 		var name = "Uranus"
 		get_api_data(name)
 		const question_ans = question_object[6].questions
@@ -367,6 +433,8 @@ AFRAME.registerComponent('do-something', {
 	});
 
 	neptuno.addEventListener('click', function (evt) {
+    stopAllVoiceOvers()
+    neptuneVoiceover.play()
 		var name = "Neptune"
 		get_api_data(name)
 		const question_ans = question_object[7].questions
