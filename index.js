@@ -14,7 +14,9 @@ app.get('/', (req, res) => {
 app.get('/vr', (req, res) => {
   res.sendFile(path.join(dirname + '/templates/vr.html'))    
 })
-
+app.get('/vr2', (req, res) => {
+  res.sendFile(path.join(dirname + '/templates/vr2.html'))    
+})
 app.listen(port, () => {
   console.log(`App listening on port ${port}`)
 })
